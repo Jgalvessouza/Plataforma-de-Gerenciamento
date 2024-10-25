@@ -1,0 +1,336 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Simplon BP';
+    color: #1d1c1c;
+    background-color:rgb(255, 255, 255);
+}
+section .carousel{
+    background-color: #00098d;
+}
+
+/* Estilos do Cabeçalho */
+header {
+    background:linear-gradient(to right, #7a0101,#a10202,#fa0101);
+    padding: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    font-family: 'Simplon BP';
+    color: #fbfbfc;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a:hover {
+    color: #1607eb;
+}
+
+/* Estilo para o carrossel */
+
+.carousel {
+    background: radial-gradient(circle,rgb(102, 154, 233), rgb(17, 28, 179), rgb(1, 6, 83));
+    position: relative;/* Defina uma altura maior conforme necessário */
+    margin: auto;
+    overflow: hidden;
+    font-size: larger;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-item {
+    display: none; /* Esconde todos os itens inicialmente */
+    min-width: 50%;
+    box-sizing: border-box;
+    position: relative;
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: center; /* Centraliza o conteúdo */
+    padding: 10px;
+
+  }
+  .carousel-content {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Espaço entre a imagem e o texto */
+  }
+  
+  .carousel-item.active {
+    display: block; /* Exibe apenas o item ativo */
+  }
+  
+  .carousel-caption img {
+    align-items: center;
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Limita a largura máxima ao tamanho do container */
+    max-height: 300px; /* Ajuste a altura máxima conforme necessário */
+    object-fit: contain;
+  }
+   .carousel-caption {
+    display: flex;       /* Define um layout flexível */
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    gap: 0px;   
+    font-size: 20px;
+    width: 100%;
+    color: rgb(248, 247, 247);
+    border-radius: 55px;
+  }
+  .carousel-caption-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel-caption h4 {
+    font-size: 44px; /* Ajuste o tamanho da fonte conforme necessário */
+    margin-bottom: 10px; /* Espaçamento abaixo da primeira linha */
+  }
+  .cta-button {
+    background-color: rgb(231, 15, 15);
+    color: white;
+    padding: 10px 20px; /* Ajuste o padding conforme necessário */
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    margin-left: 0px;
+    margin-bottom: 1px;
+    display: inline-block;
+    width: 200px; /* Define uma largura fixa para o botão */
+    text-align: center; /* Alinha o texto no centro */
+    margin-top: 45px;
+}
+
+.cta-button:hover {
+    background-color: #0407ee;
+}
+/* Botões de navegação */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Seção de Planos */
+.planos-section {
+    padding: 5px 5px;
+    background: linear-gradient(to bottom, #fff, #fff);
+    text-align: center;
+}
+
+.planos-section h2 {
+    font-family: 'Simplon BP';
+    color: #0205b1;
+    font-size: 2rem;
+    margin: 5px 5px;
+}
+
+
+.planos-section img {
+    margin: auto;
+}
+
+.planos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plano {
+    background: rgb(157, 1, 4);
+    border: 5px solid rgb(157, 1, 4);
+    border-radius: 50px;
+    padding: 20px;
+    text-align: center;
+    width: 50%;
+    max-width: 300px;
+    margin: 10px;
+    transition: transform 0.3s, box-shadow 0.3s,border-color 0.3s;
+}
+.plano:hover {
+    border-color: #fc1723; /* Mude para a cor desejada */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Exemplo de sombra ao passar o mouse */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.plano h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f5f0f0;
+}
+
+.plano p {
+    font-family:'Simplon BP';
+    font-size: 2.1rem;
+    color: #fff;
+}
+
+/* Seção de Vantagens */
+.vantagens-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.vantagens-section h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+.vantagens-section ul {
+    list-style: none;
+}
+
+.vantagens-section li {
+    font-size: 1.2rem;
+    margin: 40px 0 10px;
+}
+
+/* Seção de Contato */
+.contato-section {
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.contato-section h2 {
+    background: linear-gradient(to bottom, #00098d, rgb(0, 145, 241));
+    color: #fffdfd;
+    padding: 20px 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #d80214;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003f66;
+}
+
+/* Rodapé */
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background: linear-gradient(to bottom, #00098d, rgb(0, 145, 241))
+  }
+  
+  .footer-content {
+    flex: 1;
+    font-family: 'Simplon BP';
+    color:#fffff0
+  }
+  
+  .social-links {
+    flex: 1;
+    display: flex;
+    
+  }
+  
+  .social-links a {
+    flex: 1;
+    display: flex;
+    margin: 20px;
+    font-family: 'Simplon BP';
+    color:#fffff0
+  }
+  
+  .social-links img {
+    margin: auto;
+    margin-right: 5px;
+  }
+  
+
+/* Responsividade */
+@media (max-width: 768px ){
+
+    .carousel-caption-text h4 {
+        font-size: 1.5rem;
+    }
+    .footer-container {
+        flex-direction: row; /* Em telas maiores, os itens ficam lado a lado */
+    }
+    .cta-button {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+    nav ul {
+        flex-direction: column; /* Para deixar o menu na vertical em telas menores */
+    }
+    .planos {
+        flex-direction: column;
+    }
+    .plano {
+        width: 100%;
+    }
+}
